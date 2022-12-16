@@ -1,0 +1,15 @@
+C:\HyungJun\CsWorks\WhatIsProgramming\bin\Debug\net6.0\WhatIsProgramming.exe
+C:\HyungJun\CsWorks\WhatIsProgramming\bin\Debug\net6.0\WhatIsProgramming.deps.json
+C:\HyungJun\CsWorks\WhatIsProgramming\bin\Debug\net6.0\WhatIsProgramming.runtimeconfig.json
+C:\HyungJun\CsWorks\WhatIsProgramming\bin\Debug\net6.0\WhatIsProgramming.dll
+C:\HyungJun\CsWorks\WhatIsProgramming\bin\Debug\net6.0\WhatIsProgramming.pdb
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.csproj.AssemblyReference.cache
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.GeneratedMSBuildEditorConfig.editorconfig
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.AssemblyInfoInputs.cache
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.AssemblyInfo.cs
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.csproj.CoreCompileInputs.cache
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.dll
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\refint\WhatIsProgramming.dll
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.pdb
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\WhatIsProgramming.genruntimeconfig.cache
+C:\HyungJun\CsWorks\WhatIsProgramming\obj\Debug\net6.0\ref\WhatIsProgramming.dll
