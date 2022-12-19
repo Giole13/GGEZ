@@ -1,412 +1,263 @@
 ﻿using System;
-using static System.Net.Mime.MediaTypeNames;
-using System.Diagnostics;
-using System.Numerics;
-using System.Reflection.PortableExecutable;
-using System.Text;
 
-namespace WhatIsProgramming
+namespace WhatIsOperator
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
+            /*Console.WriteLine("Hello, World!");
 
-            // 한줄 주석
-            /* 
-             * 여러 줄 주석이다.
-             * 주석은 메모하고 싶을 때 쓰는 기능
-             * 영어로 주석은 Comment
-            */
+            Console.Write("");
+            string stringNumber = Console.ReadLine();
+            int intnumber = Convert.ToInt32(stringNumber);
+            Console.WriteLine(); */
 
-
-            /**컴퓨터는 하드웨어(Hardware)와 소프트웨어(Software)로 구성된다.하드웨어는 PC, 스마트폰과 같은
-             * 물리적으로 존재하는 장치를 의미한다.소프트웨어는 이러한 하드웨어에 설치된 운영체제, 앱 등을 의미한다.
-             *
-             *프로그램(Program)이란 우리가 하고자하는 작업을 컴퓨터에게 전달하여 주는 역할을 하는 소프트웨어를
-             * 의미한다.
-             * 프로그램 안에는 "무엇을 어떤 식으로 해라" 와 같은 형태의 명령어(Instruction) 들이 있다.
-             *
-             *소프트웨어를 만드는 행위를 프로그래밍(Programing) 또는 코딩(Coding) 이라고 한다.
-             *
-             *컴퓨터가 알아듣는 언어는 한가지 뿐이다.
-             * 0과 1의 형태로 구성되어 있으며 기계어(Machine Language)라고 부른다.
-             * 과거 초기 형태의 컴퓨터는 이러한 기계어를 사용하여 프로그래밍을 했었다.
-             * 기계어는 인간에게 상당히 불편한(난해한) 언어기 때문에 사람이 이해하기 쉬운 프로그래밍 언어가 만들어지게 된다.
-             * 프로그래밍 언어의 예약어(Keyword)와 문법으로 소프트웨어를 만드는 사람을 프로그래머(Programmer)또는
-             * 개발자(Developer)라고 한다.
-             *
-             *프로그래밍 언어의 문법에 맞게 작성한, 텍스트로 된 명령 집합을 코드(Code) 또는 소스(Source)라고 한다.
-             * 소스코드를 기계어로 번역하는 작업을 컴파일(Compile)이라고 한다.이런한 작업을 하는 소프트웨어를
-             * 컴파일러(Compiler)라고 한다.
-             *
-             *프로그래밍 하는 과정은 다음과 같다.
-             * 1.텍스트 에디터로 소스를 작성하여 파일로 저장한다.ex).cs 파일 같은것
-             *2.소스 파일을 컴파일하여 실행 프로그램을 생성한다.ex) .exe 파일 같은것
-             * 3.프로그램을 실행한다.
-             * 이 중 1, 2 단계를 합쳐서 흔히 빌드(Bulid)라고 한다.
-             *
-             *프로그래밍 과정 중 발생한 오류를 버그(Bug)라고 한다.
-             *오류를 탐색하고 수정하는 과정을 디버그(Debug), 디버깅(Debugging) 또는 트러블 슈팅(Trouble shooting)
-             * 이라고 한다.
-             *
-             *C#의 경우
-             * C# 언어로 코딩 -> IL(Inetermediate Language)코드로 변환 -> 기계어
-             * ildasm-> .exe 파일을 코드로 변환
-             *
-             * C#의 특징
-             *C#은 .Net(닷넷)을 위한 많은 언어 중 하나로, 마이크로소프트의 닷넷 플랫폼을 기반으로 한다.
-             * 절차적 언어와 객체지향적 언어의 특징, 그리고 함수형 프로그래밍 스타일을 제공하는 다중 페러다임
-             *프로그래밍 언어이다.
-             *
-             *C#은 C, C++, Java, Javascript와 기초 문법이 비슷하다.
-             * C#은 자동으로 메모리를 관리한다. (Garbage collection 기능을 제공)
-             * C#은 컴파일 기반 언어이다.
-             * C#은 강력한 형식(Strongly typed)의 언어이다. (하나의 타입변수에는 한가지 타입의 변수만 저장가능)
-             * C#은 Generic과 LINQ 등 편리한 기능을 제공한다.
-             *
-             * .Net(닷넷)
-             * 닷넷 프레임워크와 닷넷 코어를 합쳐서 편하게 닷넷이라고 한다,
-             *닷넷은 소프트웨어 프레임워크이다.
-             *
-             *프레임워크 : 응용 프로그램의 개발 속도를 높이는 데 도움이 되는
-             *API(Application Programming Interface) 및 서비스 모듈이다.
-             *
-             *함수, 라이브러리, APi, 플랫폼 의 정의
-             * 함수 : 프로그램에서 사용하기 위한 기능의 단위를 의미한다. 보통 하나의 함수는 하나의 기능을 한다.
-             *라이브러리 : 어떠한 기능을 구현할 때 도움이 되는 기능, 함수의 모음이다.
-             *API : 어떠한 기능을 구현할 때 도움이 되도록 문서와 함께 제공되는 라이브러리, 함수의 모음이다.
-             * 플랫폼 : 프로그램을 실행하기 위한 배경 환경 또는 운영체제를 의미한다.
-             *
-             *
-             *
-             *MSDN은 일종의 사전같은 것
-             * 자주 사용하는 함수나 그렇지 않는 함수나 전부 MSDN에 존재함.
-             *
-             *공부하며 생각할 것은 항상 언제나 좋은 방법은 존재한다라는 것.
-             */
-             //위 내용은 중요함
+            string stringBinary = Convert.ToString(10, 2);
+            Console.WriteLine(stringBinary);
+            int intbinary = Convert.ToInt32("0111",2);
+            Console.WriteLine(intbinary);
 
             /**
-             * C#의 기본 코드 구조
-             * C# 프로그램은 class와 Main() 메서드가 반드시 있어야 한고, 하나 이상의 문(Statement)이 있어야 한다.
-             * C#의 기본 코드는 위쪽에 네임스페이스 선언부와 Main() 메서드가 오고, 총괄호 시작과 끝을 사용하여
-             * 프로그램 범위(Space)를 구분한다.
+             * 연산자
+             * 데이터로 연산 작업을 수행할 때는 연산자(Operator)를 사용한다. 연산자는 기능에 따라 대입, 산술,
+             * 관계, 논리, 증강, 조건, 비트, 시프트 연산자 등으로 나누며, 이용 형태에 따라 항 1개로 연산을 하는
+             * 단항(Unary) 연산자와 항 2개로 연산을 하는 이항(Binary) 연산자, 항 3개로 연산을 하는 삼항(Ternary)
+             * 연산자로 나눈다.
              * 
-             * 네임스페이스 : 자주 사용하는 네임스페이스를 위쪽에 미리 선언해 둘 수 있다.
-             * Main() 메서드 : 프로그램의 시작 지점이며, 반드시 있어야 한다.
-             * 중괄호 ({}) : 프로그램 범위를 구분 짓는다.
-             * 세미콜론 (;) : 명령어 (문, 문장)의 끝을 나타낸다.
+             * 단항 연산자
+             * 단항 연산자는 연산자와 피연산자 하나로 식을 처리한다.
+             * ex) [연산자] [피연산자]
+             * + 연산자 : 특정 정수형 변수 값을 그대로 출력한다.
+             * - 연산자 : 특정 정수형 변수 값을 음수로 변경하여 출력한다. 음수값이 들어 있다면 양수로 변환해서
+             *          반환한다.
              * 
-             * Main() 메서드
-             * 메서드(Method) : 클래스에서 제공하는 멤버 함수를 의미한다.
-             * Main() 앞에 static 키워드가 있어 개체를 생성하지 않고 바로 실행할 수 있다.
-             * Main() 메서드가 2개이면 "프로그램 진입점이 2개 이상 정의되어 있습니다." 라는 
-             * 에러메시지가 출력되어 프로그램이 컴파일 되지 않는다.
+             * 이항 연산자
+             * 이항 연산자는 연산자와 피연산자 2개로 식을 처리한다.
+             * ex) [피연산자] [연산자] [피연산자2]
              * 
-             * 대, 소문자 구분하기
-             * C#은 대, 소문자를 구분하다. 정확히 입력하지 않으면 에러가 발생한다.
+             * 삼항 연산자
+             * 삼항 연산자는 식 1개의 항(Expression)과 그 결과에 따른 피연산자 각 1개씩 총 2개 항으로 식을 처리한다.
+             * ex) (식) ? 피연산자1 : 피연산자2
              * 
-             * 문법, 스타일, 패턴
-             * 문법(Syntex) : 프로그래밍을 하기 위해 반드시 지켜야 하는 규칙(Rule)이다. 언어별로 다르다.
-             * 스타일(Stlye) : 프로그래밍 가이드라인(Guideline)이다.
-             * 패턴(Pattern) : 자주 사용하는 규칙과 스타일을 모음이 다.
-             * 
-             * 정규화된 이름
-             * 정규화된 이름(Fully qualified names)은 아래와 같이 네임스페이스 이름과
-             * 형식 이름까지 전체를 지정하는 방식이다. */
-
-             //System.Console.Write("Hello, World!");
-             //Console.Write("Hello, World!");
-
-            /** 출력문 : 명령 프롬포트에 출렧하는 구문
-            * 주석문 : 실행에 영향을 주지 않는 코드 설명문
-            *  - 한 줄 주석.
-            *  - 여러줄 주석 있음.
-            *  
-            *  &&들여쓰기 : 프로그램 소스 코드의 가독성을 위해서 사용하는 일반적인 들여쓰기 규칙
-            *            보통 4칸의 공백(Space) 또는 Tab을 사용하지만 혼용하면 안된다.
-            *  공백처리 : C#에서 명령어 사이, 기호와 괄호 사이의 공백, Tab, 줄 바꿈은 무시된다. */
-
-            Console.WriteLine(
-                "Hello, World!"
-                );
-
-            /**  
-            * 이스케이프 시퀸스
-            * C#은 WriteLine() 메서드에서 사용할 확장 문자를 제공하는데, 이를
-            * 이스케이프 시퀸스(Escapesequence)라고 한다.
-            * 역슬래쉬(\) 기호와 특정 문자를 조합하면 특별한 기능을 사용 할 수 있다.
-            * 어떤 이스케이프 시퀸스가 있는지 검색하면 알 수 있다. 
-            */
-
-            Console.Write("ddes \n");
-            Console.Write("Hello, World!");
-
-            /**
-             * 문자열 보간법
-             * 문자열 보간법(string interpolation) 또는 문자열 템플릿(String template) 이라고도 한다.
-             * 문자열을 묶어서 처리하기 위한 기능이다. 기존에는 String.Format() 메서드를 주로 사용했었는데
-             * C# 6.0 버전부터 $"{}" 형태로 간결하게 제공하고 있다.
-             * +연산자 안에는 타입을 구분하는 로직이 숨어있음 -> 속도가 느림
-             * 그렇기에 문자열을 보간해주는 것임
+             * 식과 문
+             * 값 하나 또는 연산을 진행하는 구문의 계산식을 식(Expression) 또는 표현식이라고 한다. 표현식을 사용하여
+             * 명령 하나를 진행하는 구문을 문(Statement) 또는 문장이라고 한다.
              */
 
-            string hello = "hello";
-            string world = "world!";
-            Console.Write("Hello, "+"World!"); ///+연산자
-            Console.Write("{0}, {1}", "Hello", "world"); ///문자열 보간법
-            Console.WriteLine($"{hello}, {world}"); /// $문자열 보간법
+            // 단항 연산자
+            const int PLUS_FIVE = +5;
+            const int MINUS_FIVE = -5;
 
-            const int THREE_NUMBER = 3;
-            const string ODD_WORD = "홀수";
-            Console.WriteLine($"{THREE_NUMBER}은(는) {ODD_WORD}입니다.");
+            // 이항 연산자
+            const int PLUS_TEN = 5 + 5;
 
-            string stringFormat = string.Format("{0}은(는) {1}입니다.", THREE_NUMBER, ODD_WORD);
-            Console.WriteLine(stringFormat);
+            // 삼항 연산자               식 1개                2항                      3항
+            string compareTen = (PLUS_FIVE > 10) ? "{0}은(는) 10 보다 크다" : "{0}은(는) 10보다 크지 않다";
+            Console.WriteLine(compareTen,PLUS_FIVE);
 
-            //이렇게 문자열을 + 연산하면 느리다.
-            string stringPlus = THREE_NUMBER + "은(는) " + ODD_WORD + "입니다.";
-            Console.WriteLine(stringPlus);
+            // 변환 연산자
+            // () 기호를 사용하여 특정 값을 원하는 데이터 형식으로 변환할 수 있다.
+            const int PI_INT = (int)3.141592;
+            const float PI_FLOAT = (float)3.141592;
 
-            string name = "박형준";
-            string PJname = "(게임콘텐츠제작) 모바일 게임 개발자 양성과정C";
-            string book = "(전공)게임 프로그래밍 기초 기술";
-
-            Console.Write($"{name}\n{PJname}\n{book}\n");
+            Console.WriteLine("PI_INT : {0}, PI_FLOAT : {1}", PI_INT, PI_FLOAT);
 
             /**
-             * 변수
-             * 프로그램에서 값을 다루려면 데이터를 메모리에 잠시 보관해 놓고 사용할 수 있는 임시 저장공간이 필요하다.
-             * 이때 변수를 사용한다. 변수를 사용하는 순서는 선언(메모리에 공간을 확보)하고 정의(대입, 할당)하여
-             * 사용하는 것이다. 변수는 데이터 형식, 변수의 이름, 대입한 값으로 이루어져 있다.
+             * 산술, 관계, 논리, 증감, 조건, 비트, 시프트 연산자
              * 
-             * 변수 선언 : 메모리에 데이터를 저장할 공간을 확보하는 것이다.
-             * 변수 정의 : 확보한 공간에 값을 저장하는 것이다.
-             * 변수 초기화 : 변수를 선언한 직후, 초기값으로 정의하는 것이다, 초기화는 변후의 초기값을 명확하게 정의하여
-             *              원치 않는 논리적인 오류를 방지하는 역할을 한다.
-             *              
-             * 메모리는 언제나 내부안이 꽉 차있다. 이걸 할당해주면 그만큼 사용하겠다고 정의 하는것이다.
+             * 산술 연산자
+             * 더하기(Add), 빼기(Subtract), 곱하기(Multiply), 나누기(Divide), 나머지(Remainder, Modules) 등
+             * 수학적 연산을 하는 데 사용한다. 보통 정수 형식와 실수 형식의 산술 연산에 사용한다.
+             * ex) +, -, *, /, %
              * 
-             * C#에서는 쓰레기 값을 정의해주지 않음
+             * 문자열 연결 연산자
+             * 산술 연산자 중 하나인 + 연산자는 피연산자의 데이터 타입에 따라 산술 연산 또는 문자열 연결 연산을 수행한다.
              * 
-             * 
-             * 실행 전에는 프로그램, 실행 후에는 프로세스
-             * 메모리 또는 렘에는 임시 저장공간
-             * 하드는 저장공간
-             * cpu는 연산장치, 그래픽카드는 cpu를 도와주는 역할
-             * 
-             * Memory safety
-             * 
+             * +연산자 : 두 항이 숫자일 때는 산술(+) 연산 가능, 문자열일 때는 문자열 연결 가능
              */
 
-            //int number;     //선언
-            //number = 100;     //정의
-
-            //int number2 = 1;    //초기화
-            //int trashValue;
-
-            Console.WriteLine("int는 얼마 만큼의 메모리를 할당하나요? -> {0}byte", sizeof(int));
+            string addMessage = "string " + "plus " + "string";
+            Console.WriteLine(addMessage);
 
             /**
-             * bit : 0 또는 1 을 표현할 수 있는 최소 단위
-             * [0][0]
-             * [0][1]
-             * [1][0]
-             * [1][1]
+             * 할당 연산자
+             * 할당 연산자(Assignment operator)는 변수에 데이터를 대입하는 데 사용한다. 할당 연산자를 대입 연산자
+             * 라고도 한다. C#에서 = 기호는 같다는 의미가 아니라 오른쪽에 있는 값 또는 식의 결과를 왼쪽 변수에
+             * 할당하라고 지시하는 것이다.
              * 
-             * byte : 숫자를 세는 단위, 8bit = 1byte
-             * int가 4바이트인 이유 64비트 운영체제이기 때문
-             */
-
-            /**
-             * 변수 사용할 때 주의사항(규칙)
-             * 변수의 이름을 지을 때는 다음 규칙을 지켜야 한다.
-             * 변수의 첫 글자는 반드시 문자로 지정한다. 숫자는 변수의 이름의 첫 글자로 사용할 수 없다.
-             * 길이는 255자 이하로 하고 공백을 포함할 수 없다.
-             * 영무자와 숫자, 언더스코어(_) 조합으로 사용하며, 기타 특수 기호는 사용할 수 없다.
-             * C#에서 사용하는 키워드느 사용할 수 없다.
-             * 변수는 대, 소문자를 구분하고, 일반적으로 소문자로 시작한다.
-             * 변수는 타인이 보더라도 이해할 수 있는 이름으로 사용한다.
+             * ex) =,+=, -=, *=, /=, %=
              * 
-             * a, b, c 같은 알 수 없는 이름은 변수 이름으로 사용하지 말것
-             */
-
-            /**
-             * 데이터 형식
-             * 변수에 저장할 수 있는 데이터의 종류를 자료형(Date type) 이라고 한다.
-             * int, string, bool, double, object 등 C#에서 기본으로 제공하는 데이터 형식을
-             * 기본 형식(Primitive type)이라고 한다.
+             * 증감 연산자(Increment / Decrement operator)
+             * 변수 값을 1 증가시키거나 1 감소시키는 연산자이다. 증감 연산자가 변수 앞에 위치하느냐, 뒤에 위치하느냐에
+             * 따라 연산 처리 우선순위가 결정된다.
              * 
-             * int : 정수형 데이터 타입 (음수, 양수, 0)
-             * float: 실수형 데이터 타입 (부동소수점 형타 / 3.14)
-             * bool : 논리값을 가지는 데이터 타입 (참, 거짓)
-             * string : 문자열을 가지는 데이터 타입 ("Hello")
-             * char : 한 문자를 가지는 데이터 타입 ('a')
-             * object : C#에서 모든 자료형의 부모형 데이터 타입 (모든 데이터 저장 가능) -<
-             */
-
-            /**
-             * https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/builtin-types/built-in-types
-             * 이곳에서 데이터 타입종류를 볼수 있음
-             */
-
-            /**
-             * 상수와 리터럴
+             * ++(증가 연산자) : 변수 값에 1을 더한다.
+             * --(감소 연산자) : 변수 값에 1을 뺀다.
              * 
-             * 상수
-             * 변수를 선언할 때 앞에 const 키워드를 붙이면 상수(Constant)가 된다. 한 번 상수로 선언된 변수는
-             * 다시 값을 바꿀 수 없고, 반드시 선언과 동시에 초기화해야 한다. 이러한 const 키워드를 붙인 변수를
-             * 상소 또는 지역(local) 상수라고 한다. 상수는 주로 대문자로 표현한다.
+             * 증감 연산자가 앞에 붙으면 전위 증감 연산자라고 하며, 변수 뒤에 붙으면 후위 증감 연산자라고 한다.
              * 
-             * 리터럴
-             * 변수에 저장하기 위해 직접 대입하는 값 자체를 리터럴(Literal)이라고 한다.
-             * 정수형 리터럴: 숫자 그대로 표현한다.                              ex) 1234
-             * 실수형 리터럴 : 대문자 F 또는 소문자 f를 접미사로 붙여 표한한다.      ex) 3.14F
-             * 문자형 리터럴 : 작은 따음표로 묶어서 표현한다.                      ex) 'A'
-             * 문자열 리터럴 : 큰 따음표로 묶어서 표현한다.                        ex) "Hello"
-             * 
-             * 숫자 구분자 사용
-             * C# 7.0 버전부터는 언더스코어(_) 문자를 사용하는 숫자 구분자(Disit seaparator)를 제공한다.
-             * 숫자 형식을 표현할 때 언더스코어 문자는 무시한다. 이를 이용하면 긴 숫자를 표시할 때
-             * 가독성을 높일 수 있다.
+             * 전위(Prefix) 증감 연산자 : 정수형 변수 앞에 연산자가 위치하여 변수 값을 미리 증감한 후 나머지 연산을
+             *                          수행한다.
+             * 후위(postfix) 증강 연산자 : 정수형 변수 뒤에 연산자가 위치하여 연산식(대입)을 먼저 실행한 후 나중에
+             *                          변수 값을 증감한다.
              */
 
             int number = 0;
+            number++;
             Console.WriteLine(number);
-            number = 1;
-            Console.WriteLine(number);
-
-          //상수값     상수형 변수    리터럴  상수형 변수의 값은 두번다시 바꿀 수 없음
-            const int CONST_FIVE = 5;
-
-            //C#은 보통 double 형태로 소수점을 표현 -> f를 붙여 float 형식으로 변경
-            const float PIEEE = 3.14f;
-
-            //큰 숫자에 (_)언더바를 넣어도 값은 변하지 않는다.
-            int bignumber = 100_000 - 1000;
-            Console.WriteLine("Big number - 1000의 값이 변하지 않을까? {0}", bignumber);
-
-            //bool 형식은 참,거짓의 형태로 저장되는 데이터타입
-            bool booltype;
-            booltype = true;
-            booltype = false;
-
-            int banjee = 4;
-            const float PI = 3.14f;
-            float nub = banjee * banjee * PI;
-            Console.WriteLine("넓이 = " + nub);
 
             /**
-             * null 키워드
-             * C#에서 null 키워드는 '아무것도 없는 것'을 의미한다
+             * 관계형 연산자
+             * 관계형 연산자(Relational operator) 또는 비교 연산자(Comarative operator)는 두 항이 큰지, 작은지
+             * 또는 같은지 등을 비교하는 데 사용한다. 관계형 연산자의 결과값은 논리 데이터 형식인 참(True), 또는
+             * 거진(False)으로 출력된다.
+             * ex) <, <=, >, >=, ==, !=
              * 
-             * null 가능 형식(Nullable)
-             * 숫자 형식의 변수를 선언할 때 int?, float? 와 같이 물음표(?) 기호를 붙이면 null 가능 형식으로
-             * 변경된다. 이러한 null 가능 형식에는 아무런 값도 없음을 의미하는 null을 대입할 수 있다.
+             * 논리 연산자
+             * 논리 연산자(Logical operator)는 논리곱(AND), 논리합(OR), 논리부정(NOT)의 조건식에 대한 논리 연산을
+             * 수행한다. 연산의 결과값은 참 또는 거짓의 bool 형식으로 반환되어 Boolean 연산자라고도 한다.
+             * ex) &&(논리곱), ||(논리합), !(논리부정)
+             * 
+             * 비트 연산자
+             * 비트 연산자(Bit operator)는 정수형 데이터의 값을 이진수 비트 단위로 연산을 수행할 때 사용한다.
+             * ex) &, |, ^, ~
+             * 
+             * 시프트 연산자
+             * 시프트 연산자(Shift operator)는 정수 데이터가 담겨 있는 메모리에 비트를 왼쪽 또는 오른쪽으로 지정한
+             * 비트만큼 이동시킨다. 암호화쪽에서 많이 쓰임
+             * 
+             * ex) <<, >>
+             * 
+             * 조건 연산자
+             * 조건 연산자(conditional operator)는 조건에 따라서 참일 때와 거짓일 때 결과를 다르게 반환하며,
+             * (조건식) ? (식1 또는 값1) : (식2 또는 값2) 형태의 연산자이다. if~else 문의 축약형이기도 하다.
              */
 
-            int? nullNumber = null;
-            Console.WriteLine("Null을 눈으로 보고 싶다 ->{0}", nullNumber);
-            int donothingNumber = 0;
+            bool isBigger = false;
+            isBigger = (5 == 10) || (5 < 10);
+            Console.WriteLine(isBigger);
+
+            isBigger = !isBigger;
+            Console.WriteLine(isBigger);
+
+            int bitNumber = 10;
+            int bitResult = 0;
+            bitResult = bitNumber & 1;
+            Console.WriteLine(bitResult);
+
+            // 나열(콤마) 연산자
+            // 콤마를 구분자로 하여 한 문장에 변수 여러 개를 선언할 때 사용한다.
+            int intNumber1, intNumber2, intNumber3;
 
             /**
-             * 자동 타입 추론(Automatic type deduction)
-             * 변수에 대입하는 값의 데이터 타입이 명시적이거나 명확할 때, 데이터 타입을 명시하지 않고 생략할 수 있다.
-             * 자동 타입 추론이란 컴파일러가 대입하는 값 또는 변수의 데이터 타입으로 다른 한 쪽의 데이터 타입을
-             * 추론하는 기능을 의미한다.
-             * 
-             * default 값
-             * C# 6.0 버전부터는 자동 타입 추론으로 기본 형식의 default값을 대입할 수 있다.
-             * 기본 형식마다 정해진 default 값이 존재한다.
+             * sizeof 연산자
+             * sizeof 연산자는 단항 연산자로 데이터 형식 자체의 크기를 구하는 데 사용한다.
+             * sizeof([데이터 타입]) 형태로 사용하며, 운영 체제와 CPU 아키텍쳐의 종류에 따라 결과값이
+             * 다르게 나올 수 
              */
 
-            int number_ = default;
-            string stringValue = default;
-            char charValue = default;
-            float floatValue = default;
-
-            var autoVarible = 10;
-            var autoVaribleFloat = 3.14f;
-            var autovaribleDouble = 3.14;
+            Console.WriteLine("int의 메모리 크기는 {0} 바이트 입니다.", sizeof(Int32));
 
             /**
-             * 열거형 형식
-             * C#에서 열거형(Enumeration) 형식은 기억하기 어려운 상수들을 기억하기 쉬운 이름 하나로 묶어 관리하는
-             * 표현 방식이다. 일반적으로 열거형으로 줄여 말한다. 열거형은 enum 키워드를 사용하고 이늄 또는 이넘으로
-             * 읽는다. 열거형은 클래스 범위 내에 정의해야 하며, 메서드 범위 안에는 정의할 수 없다.
-             * 
-             * 열거형은 순서대로 0,1,2,3,4... 순으로 이어짐
+             * 연산자 우선순위
+             * 연산자 여러 개를 함께 사용할 때는 연산자 우선순위(Precedence)에 따라 계산된다.
+             * 연산자 우선순위를 잘 모를 때는 일단 괄호 연산자부터 잘 사용하도록 연습하는게 좋다.
              */
 
-            Align align = Align.TOP;
-            align = Align.LEFT;
+            /* 과제 코딩
+            Console.Write("주어 : ");
+            string subject = Console.ReadLine();
+            Console.Write("동사 : ");
+            string verb = Console.ReadLine();
+            Console.Write("목적어 : ");
+            string direct_object = Console.ReadLine();
 
-            Console.WriteLine("Enumeration 데이터는 어떻게 보일까 -> {0}", align);
+            Console.WriteLine(subject + " " + verb + " " + "a " + direct_object);
 
-            /**
-             * 입출력에 대해서
-             * 프로그램을 실행할 때마다 서로 다른 값을 입력받으려면 콘솔에서 입력한 값을 변수에 저장할 수 있어야 한다.
-             * 키보드로 입력받고 모니터로 출력하는 일반적인 내용을 표준 입출력(Standard input/output)이라고 한다.
-             * 
-             * system.Consle.readLine() : 콘솔에서 한 줄을 입력받는다.
-             * system.Consle.read()     : 콘솔에서 한 줄을 정수로 입력받는다.
-             * system.Consle.readkey()  : 콘솔에서 다음 문자나 사용자가 누른 기능 키를 가져온다.
-             */
+            Console.Write("나이 : ");
+            string age1 = Console.ReadLine();
+            int age = 0;
+            int.TryParse(age1, out age);
+            Console.WriteLine("10년 후에는 {0}이 됩니다.", age + 10);
 
-            //Console.Write("이름을 입력하시오 : ");
-            //string yourname = string.Empty;
-            //yourname = Console.ReadLine();
+            Console.Write("첫 번째 변 : ");
+            string first1 = Console.ReadLine();
+            Console.Write("두 번째 변 : ");
+            string second1 = Console.ReadLine();
 
-            //Console.WriteLine("안녕하세요. {0}님", yourname);
+            int first = 0, second = 0;
+            double third = 0;
+            int.TryParse(first1, out first);
+            int.TryParse(second1, out second);
+            third = (first * first) + (second * second);
+            third = Math.Sqrt(third);
+            Console.WriteLine("빗변길이 : {0}", third);
+            
 
-            /**
-             * 형식 변환
-             * Console.ReadLine() 메서드를 사용하여 콘솔에서 입력받은 데이터는 문자열이다. 문자열 대신 정수나 실수
-             * 데이터를 입력 받고 싶다면 입력된 문자열을 원하는 데이터 형식으로 변환할 수 있어야 한다.
-             * 
-             * 키워드 : 캐스팅 연산자, 암시적(묵시적) 형변환, 명시적 형변환
-             * 내 코드를 남이 보기에 바로 알수 있게 하기 위해서 사용함
-             */
+            Console.Write("길이 : ");
+            string length = Console.ReadLine();
+            Console.Write("너비 : ");
+            string width = Console.ReadLine();
+            Console.Write("높이 : ");
+            string height = Console.ReadLine();
 
-            /**
-            Console.Write("숫자를 입력하시오 : ");
-            string stringnumber = Console.ReadLine();
-            int intnumber = Convert.ToInt32(stringnumber);
-            int intnumber2 = int.Parse(stringnumber);
-            int intnumber3 = default;
-            //int.TryParse -> 추천 스타일
-            int.TryParse(stringnumber, out intnumber3);
-            Console.WriteLine("입력한 숫자 + 10 은 {0}입니다.", intnumber + 10);
-            Console.WriteLine("입력한 숫자 + 10 은 {0}입니다.", intnumber2 + 10);
-            Console.WriteLine("입력한 숫자 + 10 은 {0}입니다.", intnumber3 + 10);
+            int length1, width1, height1;
+            int.TryParse(length, out length1);
+            int.TryParse(width, out width1);
+            int.TryParse(height, out height1);
+
+            int volume = length1 * width1 * height1;
+            int area = ((length1 * width1) * 2) + ((length1 * height1) * 4);
+
+            Console.WriteLine("상자의 부피 : {0}\n상자의 표면적 : {1}", volume, area);
+
+
+            Console.Write("평 : ");
+            string pyeong = Console.ReadLine();
+
+            float pyeongmeter = 0;
+            float.TryParse(pyeong, out pyeongmeter);
+            pyeongmeter = 3.3058f * pyeongmeter;
+
+            Console.WriteLine("평방미터 : {0}m^2", pyeongmeter);
+            
+            int hour, minute, second, allsecond;
+
+            Console.Write("시 : ");
+            int.TryParse(Console.ReadLine(), out hour);
+            Console.Write("분 : ");
+            int.TryParse(Console.ReadLine(), out minute);
+            Console.Write("초 : ");
+            int.TryParse(Console.ReadLine(), out second);
+
+            allsecond = second + (minute * 60) + (hour * 3600);
+            Console.WriteLine("전체 초 : {0}", allsecond);
+            
+            int score1, score2, score3, score4, score5, allscore;
+            
+            Console.Write("퀴즈\t#1\t성적 : ");
+            int.TryParse(Console.ReadLine(), out score1);
+            Console.Write("퀴즈\t#2\t성적 : ");
+            int.TryParse(Console.ReadLine(), out score2);
+            Console.Write("퀴즈\t#3\t성적 : ");
+            int.TryParse(Console.ReadLine(), out score3);
+            Console.Write("중간고사#4\t성적 : ");
+            int.TryParse(Console.ReadLine(), out score4);
+            Console.Write("기말고사#5\t성적 : ");
+            int.TryParse(Console.ReadLine(), out score5);
+
+            allscore = score1 + score2 + score3 + score4 + score5;
+
+            Console.WriteLine("==============================");
+            Console.WriteLine("성적 총합 : {0}", allscore);
+            Console.WriteLine("==============================");
             */
 
-            Console.Write("소수점 반지름을 입력해주세요 : ");
-            string ban = Console.ReadLine();
-            float Jban = default;
-            float.TryParse(ban, out Jban);
-            const float PI1 = 3.14f;
-            float Jban1 = Jban * Jban * Jban;
-            float ninearea = default, ninevolume = default;
 
-            ninearea = 4 * PI1 * Jban * Jban;
-            ninevolume = PI1*4/3* Jban1;
 
-            Console.WriteLine("구의 겉넓이 : {0}\n구의 부피 : {1}", ninearea,ninevolume);
 
-           
-            /** 
-            * 컴퓨터 : 하드디스크, 렘, 그래픽카드, 
-            * Write() : 줄바꿈 없이 메시지 출력
-            * WriteLine() : 줄바꿈을 적용한 메시지 출력
-            * 
-            * Ctrl + k + c 주석처리
-            * Ctrl + k + u 주석처리 
-            * 알트 + 방향키 누르면 코드 째로 내려감
-            */
-        }   //main()
-        enum Align { TOP, BOTTOM, LEFT, RIGHT, RANDOM, VALUE };
-    }   // Class Program
-}   // namespace WHatIsProgramming
+        }
+    }
+}
