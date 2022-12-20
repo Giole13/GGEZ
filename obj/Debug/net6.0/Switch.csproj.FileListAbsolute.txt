@@ -1,0 +1,15 @@
+C:\HyungJun\CsWorks\Switch\bin\Debug\net6.0\Switch.exe
+C:\HyungJun\CsWorks\Switch\bin\Debug\net6.0\Switch.deps.json
+C:\HyungJun\CsWorks\Switch\bin\Debug\net6.0\Switch.runtimeconfig.json
+C:\HyungJun\CsWorks\Switch\bin\Debug\net6.0\Switch.dll
+C:\HyungJun\CsWorks\Switch\bin\Debug\net6.0\Switch.pdb
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.csproj.AssemblyReference.cache
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.GeneratedMSBuildEditorConfig.editorconfig
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.AssemblyInfoInputs.cache
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.AssemblyInfo.cs
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.csproj.CoreCompileInputs.cache
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.dll
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\refint\Switch.dll
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.pdb
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\Switch.genruntimeconfig.cache
+C:\HyungJun\CsWorks\Switch\obj\Debug\net6.0\ref\Switch.dll
