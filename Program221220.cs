@@ -410,129 +410,57 @@ namespace Switch
             //}
 
             //LAB 3 산수 문제 자동 출제
-            //Random munje = new Random();
-            //int input=1 , result = 0;
+            Random munje = new Random();
+            int input=1 , result = 0;
 
-            //while (result != input)
-            //{
-            //    int oper1 = munje.Next(0, 100);
-            //    int oper2 = munje.Next(0, 100);
-            //    int uhyung = munje.Next(1, 5);
+            while (result != input)
+            {
+                int oper1 = munje.Next(0, 100);
+                int oper2 = munje.Next(0, 100);
+                int uhyung = munje.Next(1, 5);
 
-            //    switch (uhyung) {
-            //        case 1:
-            //            Console.WriteLine("덧셈 문제 출제 나갑니다.");
-            //            result = oper1 + oper2;
-            //            Console.WriteLine($"{oper1} + {oper2} = ");
+                switch (uhyung) {
+                    case 1:
+                        Console.WriteLine("덧셈 문제 출제 나갑니다.");
+                        result = oper1 + oper2;
+                        Console.WriteLine($"{oper1} + {oper2} = ");
 
-            //            Console.Write("답을 써주세요 : ");
-            //            int.TryParse(Console.ReadLine(), out input);
-            //            break;
-            //        case 2:
-            //            Console.WriteLine("뺄셈 문제 출제 나갑니다.");
-            //            result = oper1 - oper2;
-            //            Console.WriteLine($"{oper1} - {oper2} = ");
+                        Console.Write("답을 써주세요 : ");
+                        int.TryParse(Console.ReadLine(), out input);
+                        break;
+                    case 2:
+                        Console.WriteLine("뺄셈 문제 출제 나갑니다.");
+                        result = oper1 - oper2;
+                        Console.WriteLine($"{oper1} - {oper2} = ");
 
-            //            Console.Write("답을 써주세요 : ");
-            //            int.TryParse(Console.ReadLine(), out input);
-            //            break;
-            //        case 3:
-            //            Console.WriteLine("곱셈 문제 출제 나갑니다.");
-            //            result = oper1 * oper2;
-            //            Console.WriteLine($"{oper1} * {oper2} = ");
+                        Console.Write("답을 써주세요 : ");
+                        int.TryParse(Console.ReadLine(), out input);
+                        break;
+                    case 3:
+                        Console.WriteLine("곱셈 문제 출제 나갑니다.");
+                        result = oper1 * oper2;
+                        Console.WriteLine($"{oper1} * {oper2} = ");
 
-            //            Console.Write("답을 써주세요 : ");
-            //            int.TryParse(Console.ReadLine(), out input);
-            //            break;
-            //        case 4:
-            //            if (oper2 == 0) { break; }
-            //            if (oper1 == 0) { break; }
-            //            Console.WriteLine("나눗셈 문제 출제 나갑니다.");
-            //            result = oper1 / oper2;
-            //            Console.WriteLine($"{oper1} / {oper2} = ");
+                        Console.Write("답을 써주세요 : ");
+                        int.TryParse(Console.ReadLine(), out input);
+                        break;
+                    case 4:
+                        if (oper2 == 0) { break; }
+                        if (oper1 == 0) { break; }
+                        Console.WriteLine("나눗셈 문제 출제 나갑니다.");
+                        result = oper1 / oper2;
+                        Console.WriteLine($"{oper1} / {oper2} = ");
 
-            //            Console.Write("답을 써주세요 : ");
-            //            int.TryParse(Console.ReadLine(), out input);
-            //            break;
-            //    }
-            //}
-            //Console.WriteLine("정다압!!!!");
-
-            /**
-             * foreach 문은 배열(Array)이나 컬렉션(Collection) 같은 값을 여러 개 담고 있는 데이터 구조에서
-             * 각각의 데이터가 들어 있는 만큼 반복하는 반복문이다. 테이터 개수나 반복 조건을 처리할 필요가 없다.
-             */
-
-            //string 에서 글자를 하나씩 출력
-            //string stringtext = "Hello World!";
-            //int loopcount = 0;
-
-            //foreach(char onecharactor in stringtext)
-            //{
-            //    Console.Write($"{onecharactor} ");
-            //    loopcount++;
-            //}   // loop : stringtext의 길이만큼 도는 루프
-            //Console.Write($"Loop Count : {loopcount} , StringText's length{stringtext.Length}");
-
-            //문제8 1~100 숫자 중에서 3의 배수이면서 4의 배수인 정수 합 구하기
-            //int multi3_=0;
-            //for (int loopcount=1; loopcount <= 100; loopcount++)
-            //{
-            //    if(0 == (loopcount % 3))
-            //    {
-            //        if(0 == (loopcount % 4))
-            //        {
-            //            multi3_ += loopcount;
-            //        }
-            //    }
-            //}
-            //Console.WriteLine($"정수의 합은 : {multi3_}");
-
-            //문제9 두개의 정수를 입력 받아서 두 수의 차를 출력하는 프로그램 작성
-            //int numb_1=0, numb_2=0, result=0;
-            //Console.Write("정수를 입력해주세요 : ");
-            //int.TryParse(Console.ReadLine(), out numb_1);
-            //Console.Write("정수를 입력해주세요 : ");
-            //int.TryParse(Console.ReadLine(), out numb_2);
-
-            //if (numb_1 > numb_2) {
-            //    result = numb_1 - numb_2;
-            //}
-            //else if (numb_2 > numb_1)
-            //{
-            //    result = numb_2 - numb_1;
-            //}
-            //Console.WriteLine($"두 수의 차는 : {result}");
-
-            //문제 10 구구단을 출력하되 짝수(2단,4단,6단,8단)만 출력되도록 하는 프로그램 작성.
-            //int gugudan_ = 1, result = 0, index = 0;
-
-            //for (gugudan_ = 1; gugudan_ < 9; gugudan_++)
-            //{
-            //    for (index = 1; index < 9; index++)
-            //    {
-            //        result = gugudan_ * index;
-            //        Console.Write($"{result} ");
-            //        if (gugudan_ == index)
-            //        {
-            //            break;
-            //        }
-
-            //    }
-            //    Console.WriteLine();
-
-            //문제 11 다음 식을 만족하는 모든 A와 Z를 구하는 프로그램 작성
-            int A = 1;
-            int Z = 9;
-            int result1=0, result2 = 0;
-
-            result1 = A + Z;
-            result2 = A + Z;
-
-            Console.WriteLine(result1+result2);
-
-
+                        Console.Write("답을 써주세요 : ");
+                        int.TryParse(Console.ReadLine(), out input);
+                        break;
+                }
             }
-        }       // Main()
+            Console.WriteLine("정다압!!!!");
+
+
+
+        }// Main()
     }
-}   
+    
+}
