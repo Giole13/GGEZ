@@ -215,17 +215,6 @@ namespace WhaIsArray
                 //clearing = int.TryParse(Console.ReadLine(), out appleEatPeople[index]); //배열에 데이터 입력
                 appleEatPeople[index] = appleRand.Next(100, 1001); //랜덤으로 입력
 
-                sametime = 
-                switch (sametime)
-                {
-                    case true:
-
-                        break;
-                    case 2:
-
-                        break;
-                }
-
 
                 sequencePeople[index] = index + 1; //몇번째 사람인지를 기록
                 if (index == 0) // if문을 사용할때는 항상 else 문을 사용해주자!
