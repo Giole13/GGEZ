@@ -1,0 +1,15 @@
+C:\HyungJun\CsWorks\AdventureStory\bin\Debug\net6.0\AdventureStory.exe
+C:\HyungJun\CsWorks\AdventureStory\bin\Debug\net6.0\AdventureStory.deps.json
+C:\HyungJun\CsWorks\AdventureStory\bin\Debug\net6.0\AdventureStory.runtimeconfig.json
+C:\HyungJun\CsWorks\AdventureStory\bin\Debug\net6.0\AdventureStory.dll
+C:\HyungJun\CsWorks\AdventureStory\bin\Debug\net6.0\AdventureStory.pdb
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.csproj.AssemblyReference.cache
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.GeneratedMSBuildEditorConfig.editorconfig
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.AssemblyInfoInputs.cache
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.AssemblyInfo.cs
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.csproj.CoreCompileInputs.cache
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.dll
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\refint\AdventureStory.dll
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.pdb
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\AdventureStory.genruntimeconfig.cache
+C:\HyungJun\CsWorks\AdventureStory\obj\Debug\net6.0\ref\AdventureStory.dll

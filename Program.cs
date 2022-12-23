@@ -1,270 +1,250 @@
-﻿using System;   //시스템에서 여러것들을 가져와 쓸 거라는 선언문
+﻿using System;
 
-namespace WhaIsArray    //내 프로그램 이름이다. 내가 정했다!
+
+namespace AdventureStory
 {
-    internal class Program  //클래스라는 것인데 C#에서는 모든 요소들이 클레스 안에 있어야함.
-    { 
-        static void Main1(string[] args) //무조건 1개는 있어야함. -> C# 콘솔(검은 창)을 사용할 때
+    public class Enemy
+    {
+
+        public int fightScore;
+        public void Believers()
         {
-            //프로그램은 여기서부터 읽기 시작한다.
 
-            //3의 배수를 제외한 수
-            //int sumofnumber = 0;
+        }
+    }
+    internal class Program
+    {
+        static bool Playerfight(int player, int enemy)
+        {
+            float playerFightScore = (float)player;
 
+            string select;
+            Random fightrand = new Random();
+            float outputFightScore = fightrand.Next(1, 201);
 
-            //for (int variable_ = 1; variable_ <= 100; variable_++)
-            //{
-            //    bool isrealmultipleofthree = (variable_ % 3 == 0);
-            //    Console.WriteLine($"{variable_} -> 3의 배수? { isrealmultipleofthree}");
-            //    //(variable_ % 3 == 0)
+            Console.WriteLine("현재 나의 전투력 : {0}", playerFightScore);
+            Console.WriteLine("현재 적의 전투력 : {0}", enemy);
+            Console.WriteLine("1. 1~200까지의 전투력 변수를 고르겠다.");
+            Console.WriteLine("2. 현재 전투력으로 싸우겠다.");
+            Console.Write("선택 : ");
+            select = Console.ReadLine();
+            Console.WriteLine("");
 
+            if (select == "1")
+            {
+                Console.WriteLine("현재 전투력 : {0}", outputFightScore / 100 * playerFightScore);
+                Console.WriteLine("현재 적의 전투력 : {0}", enemy);
+                playerFightScore = outputFightScore / 100 * playerFightScore;
+            }
+            else if (select == "2")
+            {
+                Console.WriteLine("현재 전투력 : {0}", playerFightScore);
+                Console.WriteLine("현재 적의 전투력 : {0}", enemy);
+                playerFightScore = playerFightScore;
+            }
 
-            //    if (isrealmultipleofthree == false)
-            //    {
-            //        // 3의 배수가 아닌건 다 여기로 오겠네 ?
-            //        sumofnumber += variable_;
-            //        Console.WriteLine($"잘 더해지고 있나? : {sumofnumber}\n");
-            //        //조건문은 여기서 끝난다.
-            //    }
-            //    else
-            //    {
-            //        //저 조건문이 거짓(false)이면 여기로 옴.
-            //        //조건문은 여기서부터 읽기 시작한다.
-            //        //조건문은 여기서 끝난다.
-            //    }
-            //}   //100번 도는 루프
-            //    // 루프가 끝나면 여기로 오니까 다 끝날 때까지는 더해서 마지막 값을 눈으로 보고 싶으니까
+            Console.WriteLine("");
+            bool outcome = playerFightScore > enemy;
+            return outcome;
+        }
+        static void Main(string[] args)
+        {
+            //클래스 정의 모음
+            Random statRand = new Random();         //스탯을 랜덤으로 추가하기 위한 클래스
+            Random sceneRand = new Random();        //씬을 랜덤으로 호출하기 위한 클래스
 
-            //Console.WriteLine("\n\n\n\n");
-            //Console.WriteLine("=================================");
-            //Console.WriteLine("총 더한 갯수 : {0}", sumofnumber);
-            //Console.WriteLine("=================================");
+            //플레이어 관련 변수
+            int addgold;                            //골드를 추가할때 쓰는 변수
+            int playerHealth = 4, playerMental = 5; // 플레이어 체력 멘탈
+            int str = statRand.Next(5, 10); // 힘 스탯 1에서 6까지 랜덤분배
+            int agil = statRand.Next(5, 10); // 민첩
+            int intell = statRand.Next(5, 10); // 지능
+            int charisma = statRand.Next(5, 10); // 카리스마
+            int health = statRand.Next(5, 10); // 건강
+            int wisdom = statRand.Next(5, 10); // 지혜
+            int playerExp = 0, levelupExp = 10; // 현재레벨과 레벨업 시 필요한 량
+            int gold = 0;                      // 플레이어의 골드
+            int playerFightScore = 11;          // 플레이어의 전투력 설정
 
+            //씬과 관련된 변수
+            string select;                      // 선택문을 받는 변수
+            bool fightResult;                   // 전투결과 bool타입
+            int sceneRandom;                    // 씬을 랜덤으로 돌리기 위한 변수
 
-            //for(int index = 1; index <= 50; index++)
-            //{
-            //    Console.WriteLine();
-            //}
+            //아이템 관련 변수
+            string[] weapon = new string[1] { "우드 스태프" };       //무기배열
+            string[] armor = new string[1] { "패드 아머" };         //방어구배열
+            string[] characteristics = new string[1] { "통뼈" };  //특성배열
+            string[] inventory = new string[10] { "", "", "", "", "", "", "", "", "", "" };  //인벤토리 배열
 
-            //// 프로그램 사용자로부터 양의 정수를 하나 입력 받아서,
-            //// 그 수만큼 "Hello World" 를 출력하는 프로그램 작성
-            //int someNumber = 100;
-            //bool isPositiveInteger = (0 < someNumber);
+            //적 관련 변수
+            Enemy beliver = new Enemy();    //신자를 적 클래스로 정의
+            beliver.fightScore = 10;        //신자의 전투력을 10으로 설정
 
-            ///**
-            // * 프로그램 사용자로부터 계속해서 정수를 입력 받는다.
-            // * 그리고 그 값을 계속해서 더해 나간다. 이러한 작업은
-            // * 프로그램 사용자가 0을 입력할 때까지 계속되어야 하며,
-            // * 0이 입력되면 입력된 모든 정수의 합을 출력하고 프로그램 종료.
-            // */
+            //플레이어의 스탯을 보여주는 함수
+            void Stat()
+            {
+                Console.WriteLine($"현재 캐릭터의 체력 : {playerHealth}");
+                Console.WriteLine($"현재 캐릭터의 정신력 : {playerMental}\n");
 
-            //bool isNumberZero = (someNumber == 0);
+                Console.WriteLine($"현재 스탯\n힘 : {str} \t\t민첩 : {intell} \t지능 : {intell} " +
+                    $"\n카리스마 : {charisma} \t건강 : {health} \t지혜 : {wisdom}\n");
 
-            // 프로그램 사용자로부터 입력 받은 숫자에 해당하는 구구단을 출력하되,
-            // 역순으로
-            //int userInputNumber = 3;
-            //for(int index = 9; index >= 1; index--)
-            //{
-            //    Console.WriteLine("{0} x {1} = {2}",
-            //        userInputNumber, index, userInputNumber * index);
-            //}
+                Console.WriteLine($"현재 골드 : {gold}");
+                //string result = String.Join(separator, value); 
 
-            ///**
-            // * 
-            // */
-            //char userInputAlphabet = 'c', secertCode = 'y';
-            //bool isSmallAlphabet =
-            //    ('a' <= userInputNumber && userInputNumber <= 'z');
+                Console.WriteLine($"현재 인벤토리 : " +
+                    $"\n[{inventory[0]}] [{inventory[1]}] [{inventory[2]}] [{inventory[3]}] [{inventory[4]}]" +
+                    $"\n[{inventory[5]}] [{inventory[6]}] [{inventory[7]}] [{inventory[8]}] [{inventory[9]}]");
 
-            //bool isAlphabetFront = (userInputNumber <= secertCode);
-            //bool isAlphabetBack = (userInputNumber >= secertCode);
-
-            //if (isSmallAlphabet) { /*Do nothing*/}
-            //else
-            //{
-            //    Console.WriteLine("{0} {1}",
-            //        "asdf",
-            //        "asdf");
-            //}
-
-            //if (isAlphabetFront)
-            //{
-            //    Console.WriteLine("시크릿 코드는 앞에 있어요");
-            //}
-            //else { /*Do nothing*/}
-
-            //if (isAlphabetBack)
-            //{
-            //    Console.WriteLine("시크릿 코드는 뒤에 있어요");
-            //}
-            //else { /*Do nothing*/}
-
-            ////@@@@@@@@@3의 배수 4의 배수 더하는 프로그램
-            //int somNumber =100;
-            //bool isMultipleOfThree = (somNumber % 3 == 0);
-            //bool isMultipleOfFour = (somNumber % 4 == 0);
-
-            //bool isSatisfyCondition = isMultipleOfThree && isMultipleOfFour;
-
-            //if (isSatisfyCondition)
-            //{
-            //    somNumber += somNumber;
-            //    // if : 3의 배수이면서 4의 배수이면
-            //}
-
-            ////별을 100번 찍는 법
-            //Console.WriteLine("{0} {1} {2} {3} {4}",
-            //    "**********", "**********", "**********", "**********", "**********");
-
-            //for(int index = 1; index <= 100; index++)
-            //{
-            //    Console.Write("* ");
-            //}
-
-            //Console.WriteLine("\n\n\n###################################");
-            //for (int index=1;index <= 10; index++)
-            //{
-            //    Console.WriteLine();
-            //    for (int index2 = 1; index2 <= 10; index2++)
-            //    {
-            //        Console.Write("* ");
-            //    }   // loop : 이건 밖의 루프가 1번 돌 동안 10번 도는 루프
-            //}   // loop : 이건 10번 도는 루프
-
-            //Console.WriteLine("\n\n\n###################################");
-
-            //int hundredCount = 0;
-            //for (int index = 1; index <= 10; index++)
-            //{
-            //    Console.WriteLine();
-            //    for (int index2 = 1; index2 <= 10; index2++)
-            //    {
-            //        for (int index3 = 1; index3 <= 10; index++)
-            //        {
-            //            hundredCount++;
-            //            if(100 < hundredCount) { break; } else { /*Do nothing*/}
-
-            //            // 여기가 별을 찍는 지점
-            //            Console.Write("* ");
-
-
-            //            //여기서 10번마다 한줄을 띄어 줄거임
-            //            if (hundredCount % 10 ==0)
-            //            {
-            //                Console.WriteLine();
-            //            }   // if: 별을 10번 찍을 때마다 한 줄 띄어주는 문
-            //        }   // loop : 1번 루프가 10번 2번 루프가 10번 그동안 10번도는 루프
-            //    }   // loop : 이건 밖의 루프가 1번 돌 동안 10번 도는 루프
-            //}   // loop : 이건 10번 도는 루프
-
-
-            //유저 입력 받아서 1~20줄 이내로 입력 받음. 유저 입력은 줄, 단의 개수 임.
-            //등차 수열로 한 단이 내려갈 때마다 별 1개 씩 추가로 증가하는 프로그램 작성
-
-
-            //int jul, mainjul, index= 1, index2, full;
-            //Console.Write("표시할 줄을 입력해주세요 : ");
-            //int.TryParse(Console.ReadLine(), out mainjul);
-
-            //jul = mainjul;
-            //int two = 2;
-
-            ////입력한 숫자만큼 삼각형 만들기
-            //for (index = jul; index > 0; index--)
-            //{
-            //    for (index2 = jul; index2 > 0; index2--)
-            //    {
-            //        Console.Write("*");
-            //        if (index == index2)
-            //        {
-            //            break;
-            //        }
-            //    }
-            //    Console.WriteLine();
-            //}
-
-            ////역삼각형
-            //while (index <= jul)
-            //{
-            //    for (index2 = 1; index2 <= jul; index2++)
-            //    {
-            //        //if (index == index2) { break; }
-            //        Console.Write("*");
-            //    }
-            //    jul--;
-            //    Console.WriteLine(" ");
-            //}
+                Console.WriteLine($"현재 경험치 : {playerExp} / {levelupExp}\n");
+                Console.WriteLine("");
+            }
 
 
 
+            //모험가 이야기 타이틀 씬
+            bool startSelect = false; //roop: 만약 시작화면에서 다른 선택지를 할경우 반복
+            while (startSelect == false)
+            {
+
+                Console.WriteLine("#############################");
+                Console.WriteLine("\t모험가 이야기");
+                Console.WriteLine("#############################\n");
+
+                Console.Write("TAP TO START\n");
+                Console.ReadLine();
+                Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+
+                Console.WriteLine("1. 무작위 시작");
+                Console.WriteLine("2. 모험가 커스텀\n");
+                Console.Write("선택지를 골라주세요 : ");
+                select = Console.ReadLine();
+                Console.WriteLine("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+
+                //무작위 시작을 할 경우
+                if (select == "1") //1. 무작위 시작 
+                {
+                    Stat();
+
+                    addgold = statRand.Next(10, 21);
+                    Console.WriteLine($"+ 골드 {addgold}");
+                    gold += addgold;
+                    Console.WriteLine($"+ {weapon[0]}");
+                    inventory[0] = weapon[0];
+                    Console.WriteLine($"+ {armor[0]}");
+                    inventory[1] = armor[0];
+                    Console.WriteLine($"+ {characteristics[0]}");
+                    inventory[2] = characteristics[0];
+                    Console.WriteLine("");
+                    Console.Write($" - 모험 시작!");
+                    Console.ReadLine();
+                    startSelect = true;
+                }
+                else if (select == "2")
+                {
+
+
+                    startSelect = true;
+                }
+                else { startSelect = false; }
+            }
+
+
+            //스토리 진행 씬
+            while (playerHealth != 0 && playerMental != 0)
+            {
+                sceneRandom = sceneRand.Next(1, 3);
+                switch (sceneRandom)
+                {
+                    case 1: //모험가 이야기의 케이스 1번 스토리
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+                            Stat();
+
+                            Console.WriteLine("\"당신이 섬기는 신의 이름을 말해보시오.. 내가 축복해드리오리다..\"\n"); //스토리문
+
+                            Console.Write
+                                ("1. 하..라드?\n2. 아무도 섬기지 않는다. \n3. 대충 아무 신을 댄다.\n선택 : "); //선택지
+                            select = Console.ReadLine();
+
+
+                            Console.WriteLine("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+
+                            if (select == "1")
+                            {
+                                Console.WriteLine("\"샬라 샬라 블라 블라\"\n"); //1번 선택시
+                                Console.WriteLine
+                                    ("1. 기도를 올린다.\n2. 기도하지 않는다.\n3. 세뇌마법을 푼다.\n"); //2번 선택지
+                                select = Console.ReadLine();
+                                Console.WriteLine("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+
+                                if (select == "1")
+                                {
+                                    Console.WriteLine("\"오...그대여 축복을 받으시오.. \"\n"); //1번 선택시
+                                    Console.WriteLine($"지혜 +1 상승!");
+                                    ++wisdom;
+                                }
+                                else if (select == "2")
+                                {
+                                    Console.WriteLine("신자는 아무말이 없다.\n 그냥 갈 길을 가기로 했다.");
+                                }
+                                else if (select == "3")
+                                {
+                                    Console.WriteLine("신자는 깜짝놀라며 도망갔다. \n그가 도망치면서 무언가를 흘렸다.");
+                                    Console.WriteLine("+ 매직 로브");
+                                }
+
+
+                            }
+                            else if (select == "2") //2번 선택시
+                            {
+                                Console.WriteLine("\"!@!@#$%\"");
+                                Console.WriteLine("신자는 그렇게 말하며 화를 내며 떠나갔다.");
+                                Console.WriteLine("정신력 -1");
+                                --playerMental;
+                            }
+                            else if (select == "3")
+                            {
+                                Console.WriteLine("그런 신을 섬기다니! 용서할수 없소!!\n");
+
+                                fightResult = Playerfight(playerFightScore, beliver.fightScore);
+
+                                if (fightResult == true)
+                                {
+                                    Console.WriteLine($"전투 승리!\n신자는 쓰러졌다.\n경험치 +1\n골드 +10");
+                                    ++playerExp;
+                                    gold += 10;
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"전투 패배!\n다신 나타나지 마시오!\n당신의 현재 체력이 1 줄었다!");
+                                    --playerHealth;
+                                }
+                            }
+                            else { /*Do nothing*/ }
+                            break;
+                        }
+
+                    case 2: //모험가 이야기의 케이스 2번 스토리
+                        
+                        break;
 
 
 
-
-            // 마름모 모양 만들기 
-            //for (index = 1; index < jul; index++)
-            //{
-            //    for (index2 = 1; index2 < jul; index2++)
-            //    {
-            //        if (space > 0)
-            //        {
-            //            Console.Write("/");
-            //            --space;
-            //        }
-            //        Console.Write("*");
-
-            //    }
-            //    Console.WriteLine();
-            //}
-
-            /** 별을 7개
-             *    *   
-             *   ***  
-             *  ***** 
-             * *******
-             *  ***** 
-             *   ***  
-             *    *   
-             */
-
-
-            //full = jul / 2;
-            //for (index = jul; index > 0; index--)
-            //{
-            //    for (index2 = jul; index2 > 0; index2--)
-            //    {
-            //        if (index == full)
-            //        {
-            //            for (int index3 = jul; index3 > 0; index3--)
-            //            {
-            //                Console.Write("*");
-            //                break;
-            //            }
-            //        }
-            //        if (full == index2)
-            //        {
-            //            Console.Write("*");
-
-            //        }
-            //        Console.Write("/");
-            //    }
-
-            //    Console.WriteLine();
-            //}
-
-            //문제 11 다음 식을 만족하는 모든 A와 Z를 구하는 프로그램을 작성.
-            //      A Z
-            //    + Z A
-            // --------------
-            //      9 9
+                }       
 
 
 
 
 
+            }   // loop: 플레이어 체력이나 멘탈이 0이 되면 끝나는 반복문
 
-            //조건문을 실행했으면 이제 다시 여기서부터 프로그램 시작한다.
-            //프로그램은 여기서 끝난다.
-        }   //Main()
+            Console.WriteLine("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+            Console.WriteLine("당신은 죽었습니다!"); //죽을경우 호출되는 문장
+            Console.WriteLine("\n당신의 스탯\n");
+            Stat();
+        }   //Main() 함수
     }
 }

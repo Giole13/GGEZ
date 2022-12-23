@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("WhaIsArray")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("AdventureStory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("WhaIsArray")]
-[assembly: System.Reflection.AssemblyTitleAttribute("WhaIsArray")]
+[assembly: System.Reflection.AssemblyProductAttribute("AdventureStory")]
+[assembly: System.Reflection.AssemblyTitleAttribute("AdventureStory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.

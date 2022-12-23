@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "WhaIsArray/1.0.0": {
+      "AdventureStory/1.0.0": {
         "runtime": {
-          "WhaIsArray.dll": {}
+          "AdventureStory.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "WhaIsArray/1.0.0": {
+    "AdventureStory/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
