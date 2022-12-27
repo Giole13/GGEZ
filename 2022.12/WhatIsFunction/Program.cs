@@ -4,6 +4,8 @@ namespace WhatIsFunction
 {
     internal class Program
     {
+        static int m_number1 = 1;        //글로벌 변수   //헝가리안 컨벤션          //글로벌 변수라는 것을 알리기 위함
+        static int _number2 = 3;        //글로벌 변수    //파이썬 같은걸 하시는 분들
         static void Main(string[] args)
         {
 
@@ -18,20 +20,46 @@ namespace WhatIsFunction
             //string returnValue = GetString();
             //Console.WriteLine(returnValue);
 
-            int r = SquareFunction(7);
-            Console.WriteLine(r);
+            //int r = SquareFunction(7);
+            //Console.WriteLine(r);
 
-            int sumnumber = PlusNumber(5, 2);
-            Console.WriteLine(sumnumber);
+            //int sumnumber = PlusNumber(5, 2);
+            //Console.WriteLine(sumnumber);
 
-            Console.WriteLine("32와 54를 비교해서 더 큰 수를 내보내는 함수 : {0}",BigNumber(32, 54));
-            Console.WriteLine("32와 54를 비교해서 더 작은 수를 내보내는 함수 : {0}",SmallNumber(32, 54));
-            Console.WriteLine("-32의 절대 값을 내보내는 함수 : {0}",AbsoluteValue(-32));
-            Console.WriteLine("81의 절대 값을 내보내는 함수 : {0}",AbsoluteValue(81));
+            //Console.WriteLine("32와 54를 비교해서 더 큰 수를 내보내는 함수 : {0}", BigNumber(32, 54));
+            //Console.WriteLine("32와 54를 비교해서 더 작은 수를 내보내는 함수 : {0}", SmallNumber(32, 54));
+            //Console.WriteLine("-32의 절대 값을 내보내는 함수 : {0}", AbsoluteValue(-32));
+            //Console.WriteLine("81의 절대 값을 내보내는 함수 : {0}", AbsoluteValue(81));
 
+            //Multi();
+            //Multi("반갑습니다.");
+            //Multi("Hey! 반갑습니다. ", 3);
 
+            //Console.WriteLine(Factorial(6));
 
+            int number1_ = 10;          //뒤에 언더바를 붙이는것은 로컬 변수임을 알리기 위함
+            int number2 = 30;
+            Swap(number1_, number2);
+
+            //Console.WriteLine(number1);
+            Console.WriteLine("{0}, {1}", number1_, number2);
         }       //Main()
+
+        static void Swap(int intValue1, int intValue2)
+        {
+            int temp;
+            Console.WriteLine("바뀌기 전의 값 {0}, {1}", intValue1, intValue2);
+
+            temp = intValue1;
+            intValue1 = intValue2;
+            intValue2 = temp;
+
+            Console.WriteLine("바뀐 후의 값 {0}, {1}", intValue1, intValue2);
+        }
+
+
+
+
 
         // Hello world 출력하는 사용자 정의 함수
 
@@ -161,7 +189,7 @@ namespace WhatIsFunction
             return x + y;
         }
 
-        static int BigNumber(int x,int y)
+        static int BigNumber(int x, int y)
         {
             if (x < y)
             {
@@ -179,7 +207,7 @@ namespace WhatIsFunction
 
         static int SmallNumber(int x, int y)
         {
-            if(x< y)
+            if (x < y)
             {
                 return x;
             }
@@ -204,7 +232,101 @@ namespace WhatIsFunction
             {
                 return x;
             }
-            
+
         }       //절대값을 반환하는 함수 ( 0을 넣으면 0이 반환됨
+
+        static void FunctionOverloading()
+        {
+            /**
+             * 함수 오버로드: 다중 정의
+             * 클래스 하나에 매개변수를 달리해서 이름이 동일한 함수 여러 개를 정의할 수 있는데, 이를 함수 오버로드라고
+             * 한다. 우리말로는 여러 번 정의한다는 의미이다.
+             */
+
+        }
+
+        //! 숫자를 받아서 출력하는 함수
+        /**
+         * @param number int type number for print
+         */
+        static void GetNumber(int number)
+        {
+            Console.WriteLine($"int32: {number}");
+        }
+
+        //! 숫자를 받아서 출력하는 함수
+        /**
+         * @param number long type number for print
+         */
+        static void GetNumber(long number)
+        {
+            Console.WriteLine($"int64: {number}");
+        }
+
+        static void Multi()
+        {
+            Console.WriteLine("안녕하세요. ");
+        }
+
+        static void Multi(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+        static void Multi(string message, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("{0}", message);
+            }
+        }
+
+        static void RecursionFuntion()
+        {
+            /**
+             * 재귀 함수
+             * 함수에서 함수 자신을 호출하는 것을 재귀(Recursion) 또는 재귀 함수하고 한다.
+             */
+        }
+
+        static int Factorial(int n)     //재귀함수 ( 함수를 호출하는데에 코스트가 많이 들어 잘 사용하지 않는다.
+        {
+            // 여기서 탈출할 것임.
+            if(n == 0 || n == 1)
+            {
+                return 1;
+            }
+
+            Console.WriteLine("n의 값은 {0}", n);
+            return n * Factorial(n - 1);
+        }
+
+        static void FunctionScope()
+        {
+            /**
+             * 함수 범위: 전역 변수와 지역 변수
+             * 클래스와 같은 레밸에서 선언된 변수를 전역 변수(Global Variable) 또는 필드(Field)라고 하며,
+             * 함수 레벨에서 선언된 변수를 지역 변수(Local Variable)라고 한다. 이때 동일한 이름으로 변수를
+             * 전역 변수와 함수 내의 지역 변수로 선언할 수 있다. 함수 내에서는 함수 범위에 있는 지역 변수를 사용하고,
+             * 함수 볌위 내에 선언된 변수가 없으면  전역 변수 내에 선언된 변수를 사용한다.
+             * 단, C#에서는 전역 변수가 아닌 필드라는 단어를 주로 사용하며, 전역 변수는 언더스코어(_) 또는 m_ 접두사를
+             * 붙이는 경향이 있다.
+             */
+        }
+
+        static void ArrowFunction()
+        {
+            /**
+             * 화살표 정수
+             * 화살표 모양의 연산자인 화살표 연산자(=>)를 사용하여 메서드 코드를 줄일 수 있다. 이를 화살표 함수
+             * (Arrow function)라고 한다. 프로그래밍에서 화살표 함수 또는 화살표 메서드는 람다 식(Lamda expression)의
+             * 또다른 이름이다.
+             * 화살표 함수를 사용하면 함수를 줄여서 표현할 수 있다. 함수 고유의 표현을 줄여서 사용하면 처음에는 어색할 수 있다.
+             * 하지만 이 방식에 익숙해지면 차후에는 코드의 간결함을 유지할 수 있다.
+             */
+        }
+
+
+
     }       //Class
 }

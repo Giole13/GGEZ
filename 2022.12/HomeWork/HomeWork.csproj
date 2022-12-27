@@ -8,12 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MineGame.cs" />
-    <Compile Remove="Program.cs" />
-    <Compile Remove="Program2.cs" />
-    <Compile Remove="Ramda.cs" />
-    <Compile Remove="TikTacToe.cs" />
-    <Compile Remove="지뢰찾기.cs" />
+    <Compile Remove="Class1.cs" />
   </ItemGroup>
 
 </Project>
