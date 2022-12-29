@@ -115,13 +115,107 @@ namespace WhatIsClass
             //RpsGame.Game();
 
 
-            TrumpCard trumpCard = new TrumpCard();
-            trumpCard.SetupTrumpCard();
-            trumpCard.ReRollCard();
+            //TrumpCard trumpCard = new TrumpCard();
+            //trumpCard.SetupTrumpCard();
+            //trumpCard.ReRollCard();
+
+            //Description one = new Description(123);
+            //one.ValueTypeAndRefferenceType();
 
             //for (int i = 0; i < 100; i++)
             //{
             //}
+
+
+            //TrumpCard card = new TrumpCard();
+            //card.RollCard();
+
+            //Parent parent = new Parent();
+            //parent.Print();
+
+            Slime monsterSlime = new Slime();
+            Zombie monsterZombie = new Zombie();
+            Wolf monsterWolf = new Wolf();
+            BattleSystem battleSystem = new BattleSystem(); //배틀 시스템 클래스
+            bool playerLife = true;     //플레이어의 생명
+            bool gameoutcome = false;   //플레이어가 승리했는지 패배했는지 알려주는 변수
+            Random rand = new Random(); //랜덤클래스
+            int randomMonster = 0;
+
+            Console.WriteLine("Press Any Key!");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.Write("당신의 이름을 입력해주세요! : ");
+
+            Player playernum1 = new Player(Console.ReadLine()); //플레이어 이름 설정
+
+            Console.WriteLine("당신의 이름은 {0}입니다!", playernum1.name);
+
+            playernum1.hp = 1000;                       //플레이어 체력
+            playernum1.damage = 50;                     //플레이어 데미지
+            playernum1.inventory = new string[20];      //인벤토리 공간 개수 지정
+
+
+
+
+            while (playerLife)      //플레이어의 생명이 false 되면 게임 오버
+            {
+                Console.Clear();
+                Console.WriteLine("인벤토리\n");
+                foreach (string item in playernum1.inventory)
+                {
+                    Console.WriteLine(item);
+                }
+
+                randomMonster = rand.Next(1, 3 + 1);
+
+                switch (randomMonster)
+                {
+                    case 1:
+                        gameoutcome = battleSystem.BattleResult(playernum1.name, playernum1.hp, playernum1.damage,
+                            monsterSlime.name, monsterSlime.hp, monsterSlime.damage, out playernum1.hp);
+                        if (gameoutcome == true)    //플레이어 승리!
+                        {
+                            playernum1.AcquiredItem(monsterSlime.HpCheck());
+                        }
+                        break;
+                    case 2:
+                        gameoutcome = battleSystem.BattleResult(playernum1.name, playernum1.hp, playernum1.damage,
+                            monsterZombie.name, monsterZombie.hp, monsterZombie.damage, out playernum1.hp);
+                        if (gameoutcome == true)    //플레이어 승리!
+                        {
+                            playernum1.AcquiredItem(monsterZombie.HpCheck());
+                        }
+                        break;
+                    case 3:
+                        gameoutcome = battleSystem.BattleResult(playernum1.name, playernum1.hp, playernum1.damage,
+                            monsterWolf.name, monsterWolf.hp, monsterWolf.damage, out playernum1.hp);
+                        if (gameoutcome == true)    //플레이어 승리!
+                        {
+                            playernum1.AcquiredItem(monsterWolf.HpCheck());
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+                if (gameoutcome == false)  //플레이어 패배
+                {
+                    playerLife = false;
+                }
+
+
+
+
+            }
+
+            Console.Clear();
+            Console.WriteLine("당신은 사망했습니다");
+
+
+
+
 
 
         }       //Main()
