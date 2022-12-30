@@ -25,9 +25,11 @@ namespace BattleGame
 
             Console.Write("당신의 이름을 입력해주세요! : ");
 
-            Player playernum1 = new Player(Console.ReadLine()); //플레이어 이름 설정
+            Player playernum1 = new Player(); 
 
-            Console.WriteLine("당신의 이름은 {0}입니다!", playernum1.name);
+            playernum1.Name = Console.ReadLine();
+
+            Console.WriteLine("당신의 이름은 {0}입니다!", playernum1.Name);
 
             playernum1.hp = 1000;                       //플레이어 체력
             playernum1.damage = 50;                     //플레이어 데미지
@@ -47,24 +49,24 @@ namespace BattleGame
                 switch (randomMonster)      //몬스터 랜덤 스폰
                 {
                     case 1:
-                        gameoutcome = battleSystem.BattleResult(playernum1.name, playernum1.hp, playernum1.damage,
-                            monsterSlime.name, monsterSlime.hp, monsterSlime.damage, out playernum1.hp);
+                        gameoutcome = battleSystem.BattleResult(playernum1.Name, playernum1.hp, playernum1.damage,
+                            monsterSlime.Name, monsterSlime.Hp, monsterSlime.Damage, out playernum1.hp);
                         if (gameoutcome == true)    //플레이어 승리!
                         {
                             playernum1.AcquiredItem(monsterSlime.HpCheck());
                         }
                         break;
                     case 2:
-                        gameoutcome = battleSystem.BattleResult(playernum1.name, playernum1.hp, playernum1.damage,
-                            monsterZombie.name, monsterZombie.hp, monsterZombie.damage, out playernum1.hp);
+                        gameoutcome = battleSystem.BattleResult(playernum1.Name, playernum1.hp, playernum1.damage,
+                            monsterZombie.Name, monsterZombie.Hp, monsterZombie.Damage, out playernum1.hp);
                         if (gameoutcome == true)    //플레이어 승리!
                         {
                             playernum1.AcquiredItem(monsterZombie.HpCheck());
                         }
                         break;
                     case 3:
-                        gameoutcome = battleSystem.BattleResult(playernum1.name, playernum1.hp, playernum1.damage,
-                            monsterWolf.name, monsterWolf.hp, monsterWolf.damage, out playernum1.hp);
+                        gameoutcome = battleSystem.BattleResult(playernum1.Name, playernum1.hp, playernum1.damage,
+                            monsterWolf.Name, monsterWolf.Hp, monsterWolf.Damage, out playernum1.hp);
                         if (gameoutcome == true)    //플레이어 승리!
                         {
                             playernum1.AcquiredItem(monsterWolf.HpCheck());

@@ -8,6 +8,9 @@ namespace BattleGame
 {
     class Monster
     {
+
+
+
         Random rand = new Random();
 
         protected string name;
@@ -15,23 +18,6 @@ namespace BattleGame
         protected int damage;
         protected int defence;
         protected string[] item;
-
-        public string Name
-        {
-            get { return this.name; }
-            protected set { this.name = value; }
-        }
-        public int Hp
-        {
-            get { return this.hp + 10; }
-            protected set { this.hp = value; }
-        }
-        public int Damage
-        {
-            get { return this.damage; }
-            protected set { this.damage = value; }
-        }
-
 
 
         public void Move(string name)
@@ -44,14 +30,14 @@ namespace BattleGame
         }
         public void MoveAndAttack()
         {
-            this.Move(this.Name);
-            this.Attack(this.Name, this.Damage);
+            this.Move(this.name);
+            this.Attack(this.name, this.damage);
         }
 
         public string HpCheck()     //hp를 체크해서 0이하가 된다면 죽고 아이템을 반환
         {
             Console.WriteLine("==============================\n");
-            Console.WriteLine("{0}가(이) 죽었다!!", this.Name);
+            Console.WriteLine("{0}가(이) 죽었다!!", this.name);
             return DropItem(rand.Next(0, 1 + 1));
 
         }
@@ -66,11 +52,19 @@ namespace BattleGame
 
     class Slime : Monster
     {
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+
+
+
         public Slime()
         {
-            this.Name = "슬라임";
-            this.Hp = 100;
-            this.Damage = 2;
+            this.name = "슬라임";
+            this.hp = 100;
+            this.damage = 2;
             this.defence = 1;
             this.item = new string[] { "슬라임 핵", "끈적한 점액" };
         }
@@ -80,9 +74,9 @@ namespace BattleGame
     {
         public Wolf()
         {
-            this.Name = "하얀 늑대";
-            this.Hp = 300;
-            this.Damage = 10;
+            this.name = "하얀 늑대";
+            this.hp = 300;
+            this.damage = 10;
             this.defence = 4;
             this.item = new string[] { "늑대의 털", "늑대의 송곳니" };
         }
@@ -92,9 +86,9 @@ namespace BattleGame
     {
         public Zombie()
         {
-            this.Name = "좀비";
-            this.Hp = 200;
-            this.Damage = 20;
+            this.name = "좀비";
+            this.hp = 200;
+            this.damage = 20;
             this.defence = 1;
             this.item = new string[] { "좀비가 입었던 옷", "좀비가 신고있었던 신발" };
         }
@@ -108,17 +102,10 @@ namespace BattleGame
         public int defence;
         public string[] inventory;
 
-        public string Name
+        public Player(string name)      //이름을 입력 받는 함수 //생성자에서 이름 정함
         {
-            get { return this.name; }
-            set { this.name = value; }
+            this.name = name;
         }
-
-
-        //public Player(string name)      //이름을 입력 받는 함수 //생성자에서 이름 정함
-        //{
-        //    this.name = name;
-        //}
 
         //아이템을 획득하는 함수
         public void AcquiredItem(string item)
@@ -193,4 +180,4 @@ namespace BattleGame
             return result;
         }       //battleReslut();
     }
-}       
+}
