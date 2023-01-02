@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toast", "Toast.csproj", "{50C860A7-92B8-4C6C-ADCD-5A09AD5ABC0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsInterface", "WhatIsInterface.csproj", "{3756EFEC-19B8-47B1-8AEA-9C49915DED01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{50C860A7-92B8-4C6C-ADCD-5A09AD5ABC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50C860A7-92B8-4C6C-ADCD-5A09AD5ABC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50C860A7-92B8-4C6C-ADCD-5A09AD5ABC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50C860A7-92B8-4C6C-ADCD-5A09AD5ABC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3756EFEC-19B8-47B1-8AEA-9C49915DED01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3756EFEC-19B8-47B1-8AEA-9C49915DED01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3756EFEC-19B8-47B1-8AEA-9C49915DED01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3756EFEC-19B8-47B1-8AEA-9C49915DED01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0F9895DD-6795-47C5-8F18-0B4EA0CC8ED3}
+		SolutionGuid = {AB1FBB77-224B-4129-AB7C-01DF3DC01BE7}
 	EndGlobalSection
 EndGlobal
