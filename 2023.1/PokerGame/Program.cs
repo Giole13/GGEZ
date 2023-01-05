@@ -21,7 +21,7 @@ namespace PokerGame
             Console.ReadKey();
 
             bool playerLife = true;
-
+            
             //베팅 금액 설정
             int batMoney = 0, allMoney = 10000;
 
