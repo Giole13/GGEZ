@@ -1,0 +1,15 @@
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\bin\Debug\net6.0\WhatIsDelegate.exe
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\bin\Debug\net6.0\WhatIsDelegate.deps.json
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\bin\Debug\net6.0\WhatIsDelegate.runtimeconfig.json
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\bin\Debug\net6.0\WhatIsDelegate.dll
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\bin\Debug\net6.0\WhatIsDelegate.pdb
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.csproj.AssemblyReference.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.AssemblyInfoInputs.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.AssemblyInfo.cs
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.csproj.CoreCompileInputs.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.dll
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\refint\WhatIsDelegate.dll
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.pdb
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\WhatIsDelegate.genruntimeconfig.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsDelegate\obj\Debug\net6.0\ref\WhatIsDelegate.dll

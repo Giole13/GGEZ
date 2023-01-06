@@ -1,0 +1,15 @@
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\bin\Debug\net6.0\WhatIsInterface.exe
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\bin\Debug\net6.0\WhatIsInterface.deps.json
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\bin\Debug\net6.0\WhatIsInterface.runtimeconfig.json
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\bin\Debug\net6.0\WhatIsInterface.dll
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\bin\Debug\net6.0\WhatIsInterface.pdb
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.csproj.AssemblyReference.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.AssemblyInfoInputs.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.AssemblyInfo.cs
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.csproj.CoreCompileInputs.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.dll
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\refint\WhatIsInterface.dll
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.pdb
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\WhatIsInterface.genruntimeconfig.cache
+C:\HyungJun\CsWorks\2022.12\WhatIsInterface\obj\Debug\net6.0\ref\WhatIsInterface.dll
